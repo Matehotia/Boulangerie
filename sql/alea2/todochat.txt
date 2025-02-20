@@ -1,0 +1,60 @@
+To-Do : Gestion des Ventes de Viennoiseries Nature
+Objectif principal
+
+Créer une fonctionnalité professionnelle pour :
+
+    Lister les ventes de viennoiseries naturelles.
+    Ajouter des ventes de produits avec la gestion des détails associés.
+
+Règles de gestion
+
+    Nature : Une recette est considérée comme "nature" si tous ses ingrédients sont marqués comme naturels (is_nature = TRUE).
+        Un ingrédient est défini comme naturel lorsqu'il ne contient pas de parfum ou autres additifs artificiels.
+    Viennoiseries : Les produits sont considérés comme des viennoiseries s'ils appartiennent à une catégorie spécifique définie dans la base de données (par exemple, catégorie 3 ou nommée "Viennoiseries").
+
+Fonctionnalités
+
+    Insertion de vente :
+        Permettre d'ajouter une nouvelle vente avec les détails des recettes sélectionnées.
+        Gestion dynamique des quantités, prix unitaires, sous-totaux, et calcul du total de la vente.
+
+    Liste des ventes filtrées :
+        Lister les ventes de produits :
+            Filtrer par catégorie de produit (exemple : "Viennoiseries").
+            Filtrer par statut de nature (produits naturels uniquement).
+
+
+
+nterface utilisateur
+
+    Formulaire de vente :
+
+        Composants du formulaire :
+            Date : Champ avec valeur par défaut à la date actuelle.
+            Tableau dynamique : Liste des recettes sélectionnées avec :
+                Champ pour sélectionner une recette.
+                Champ pour saisir la quantité.
+                Calcul automatique du sous-total (quantité × prix unitaire).
+            Total : Calcul automatique du montant total du panier.
+
+        Actions :
+            Bouton pour ajouter une ligne dans le tableau.
+            Bouton "Valider" pour insérer les données dans la base.
+
+    Liste des ventes :
+        Tableau présentant :
+            Date de la vente.
+            Nom de l’utilisateur.
+            Détails de la vente (recettes, quantités, prix unitaires, sous-totaux).
+            Total de la vente.
+
+Filtrage avancé des ventes
+
+    Critères de filtrage :
+        Catégorie de produit (exemple : "Viennoiseries").
+        Statut "nature" (seulement les produits naturels).
+
+    Interface :
+        Formulaire de filtrage :
+            Liste déroulante pour sélectionner une catégorie.
+            Case à cocher pour inclure uniquement les produits naturels.

@@ -1,0 +1,114 @@
+:root {
+    --blue: #4d94ff;
+    --light-blue: #80b3ff;
+    --very-light-blue: rgba(77, 148, 255, 0.16);
+
+    --add-bg-color: #99c2ff;
+    --transparent-add-bg-color: rgba(153, 194, 255, 0.4);
+
+    --input-focus-border: #1a75ff;
+}
+
+.fs-0-5em {
+    font-size: .5em;
+}
+
+.fs-3em {
+    font-size: 3em;
+}
+
+/* Redéfinition des boutons */
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+    background-color: var(--blue);
+    border-color: var(--blue);
+}
+
+.btn-primary {
+    box-shadow: 0 0.125rem 0.25rem 0 var(--very-light-blue);
+}
+
+.btn-primary:focus {
+    border-color: #1a75ff;
+}
+
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
+    background-color: var(--add-bg-color);
+    border-color: var(--add-bg-color);
+}
+
+.btn-success {
+    box-shadow: 0 0.125rem 0.25rem 0 var(--transparent-add-bg-color);
+}
+
+.btn-success:focus {
+    border-color: #ff3399;
+}
+
+.bg-menu-theme .menu-inner > .menu-item.active > .menu-link {
+    color: var(--blue);
+    background-color: var(--very-light-blue) !important;
+}
+
+.bg-menu-theme .menu-inner > .menu-item.active:before {
+    background: var(--blue);
+}
+
+.dropdown-item:not(.disabled).active, .dropdown-item:not(.disabled):active {
+    background-color: var(--very-light-blue);
+    color: var(--blue) !important;
+}
+
+/* Form elements */
+.input-group:focus-within .form-control, .input-group:focus-within .input-group-text {
+    border-color: var(--input-focus-border);
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--input-focus-border);
+}
+
+/* Personnalisation */
+.review {
+    box-shadow: none;
+}
+
+.review hr {
+    margin: 0;
+}
+
+.review .update-btn, .review .delete-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.review .update-btn {
+    right: 4rem;
+}
+
+.stars {
+    color: var(--add-bg-color);
+}
+
+.stars-radio i {
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.checked-star::before {
+    content: "\ebac";
+}
+
+.stars-radio input[type=radio] {
+    display: none;
+}
+
+.list-group-item {
+    position: relative;
+}
+
+.list-group-item .actions {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}

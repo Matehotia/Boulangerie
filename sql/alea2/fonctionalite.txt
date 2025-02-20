@@ -1,0 +1,66 @@
+
+
+objetcif tres principale:
+listes des ventes de vienoiseries natures,
+
+
+regle de gestion:
+    -nature = sans parfum
+    -vienoiseries = categoire
+
+    fonctionalite : 
+        inseretion vente
+        liste ventre_filtre (ingredient, categorie)
+
+
+to do:
+
+    -liste vente :
+        date vente
+        user 
+        tableau vente _details:
+            recipe   
+            qtt
+            pu sub total
+        total vente
+
+    -formulaire vente :
+        date default today
+            insertion un genre de tableau :
+                recipe, qtt, pu, sub_total
+                select recipe
+                insert qtt
+                valider
+            
+             
+
+
+    - but formulaire filtre liste vente 
+        (par categorie de produit select
+         boolean si nature ou non)
+
+            CREATE TABLE ingredient (
+            id_ingredient SERIAL PRIMARY KEY,
+            ingredient_name VARCHAR(255) NOT NULL,
+            unit VARCHAR(50) NOT NULL, -- For example, grams, milliliters, teaspoons, etc.
+            price INT NOT NULL DEFAULT 0 
+            );
+            --addd colomun isnature boolean
+
+        --creer une vue recipe_nature (id_recipe)
+        CREATE TABLE recipe_ingredient (
+    id_recipe INT,
+    id_ingredient INT,
+    quantity DECIMAL(10,2), -- To store the amount needed for each recipe
+    PRIMARY KEY (id_recipe, id_ingredient),
+    FOREIGN KEY (id_recipe) REFERENCES recipe(id_recipe),
+    FOREIGN KEY (id_ingredient) REFERENCES ingredient(id_ingredient)
+);
+            join recipe_ingredient et ingredient
+            for each ingredient in recipeingredietn check boolean = yes, if one = no, so recipe not  nature,
+            recipe, nature(boolean yes or no)
+
+
+        
+
+
